@@ -32,7 +32,7 @@ const posts = (await getCollection('blog')).filter((post) => !post.data.draft).s
 
   <section class="section">
     <div class="section-heading"><div><p class="eyebrow">04 / Writing</p><h2>Recent notes</h2></div><a href="/blog/">Writing archive →</a></div>
-    <div class="list">{posts.map((post) => <a class="list-item" href={`/blog/${post.slug}/`}><span class="meta">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}</span><div><h3>{post.data.title}</h3><p>{post.data.description}</p></div></a>)}</div>
+    <div class="list">{posts.map((post) => <a class="list-item" href={`/blog/${post.id}/`}><span class="meta">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}</span><div><h3>{post.data.title}</h3><p>{post.data.description}</p></div></a>)}</div>
   </section>
 
   <section class="section contact-strip">

@@ -6,5 +6,5 @@ const posts = (await getCollection('blog')).filter((post) => !post.data.draft).s
 ---
 <PageLayout title={`Writing — ${site.name}`}>
   <section class="page-intro"><p class="kicker">Writing</p><h1>Notes from the workbench.</h1><p>Technical notes on simulation, robot interfaces, perception, and the small decisions that make a system hold together.</p></section>
-  <section class="list section">{posts.map((post) => <a class="list-item" href={`/blog/${post.slug}/`}><span class="meta">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span><div><h2>{post.data.title}</h2><p>{post.data.description}</p><div class="tags">{post.data.tags.map((tag) => <span class="tag">{tag}</span>)}</div></div></a>)}</section>
+  <section class="list section">{posts.map((post) => <a class="list-item" href={`/blog/${post.id}/`}><span class="meta">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span><div><h2>{post.data.title}</h2><p>{post.data.description}</p><div class="tags">{post.data.tags.map((tag) => <span class="tag">{tag}</span>)}</div></div></a>)}</section>
 </PageLayout>
