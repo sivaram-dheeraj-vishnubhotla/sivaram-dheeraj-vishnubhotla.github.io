@@ -7,10 +7,13 @@ const featuredProjects = projects.slice(0, 3);
 ---
 <PageLayout>
   <section class="hero">
-    <p class="kicker">{site.role} · {site.location}</p>
-    <h1>{site.name}</h1>
-    <p class="lede">{site.intro}</p>
-    <div class="actions"><a class="button" href="/projects/">Projects</a><a class="button secondary" href="/about/">About me</a></div>
+    <div class="hero-copy">
+      <p class="kicker">{site.role} · {site.location}</p>
+      <h1>{site.name}</h1>
+      <p class="lede">{site.intro}</p>
+      <div class="actions"><a class="button" href="/projects/">Projects</a><a class="button secondary" href="/about/">About me</a></div>
+    </div>
+    <div class="hero-photo"><img src="/profile.jpg" alt={`${site.name} standing beside a car`} /></div>
   </section>
 
   <section class="section home-about">
@@ -18,7 +21,10 @@ const featuredProjects = projects.slice(0, 3);
       <div><p class="eyebrow">About me</p></div>
       <div>
         <p>I work across robotics simulation, XR interaction, computer vision, backend systems, and hardware-software integration, with a focus on turning complex experiments into usable systems.</p>
-        <a class="more-about-link" href="/about/">More about me →</a>
+        <div class="about-links">
+          <a class="more-about-link" href="/about/">More about me →</a>
+          <a class="more-about-link" href={site.links.resume} target="_blank" rel="noreferrer">View resume →</a>
+        </div>
       </div>
     </div>
   </section>
