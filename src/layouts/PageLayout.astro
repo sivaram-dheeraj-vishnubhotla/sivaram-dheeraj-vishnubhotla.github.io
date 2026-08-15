@@ -29,6 +29,7 @@ const path = Astro.url.pathname;
           ['/blog/', 'Writing'],
           ['/resume/', 'Resume']
         ].map(([href, label]) => <a class:list={{ active: path === href }} href={href}>{label}</a>)}
+        <a class="contact-icon" class:list={{ active: path === '/contact/' }} href="/contact/" aria-label="Contact" title="Contact">✉</a>
       </nav>
     </header>
     <main><slot /></main>

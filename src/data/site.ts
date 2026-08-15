@@ -1,11 +1,13 @@
 export const site = {
-  name: 'Dheeraj Vishnubhotla',
-  shortName: 'Dheeraj V.',
-  role: 'Robotics Engineer & Simulation Researcher',
+  name: 'Sivaram Dheeraj Vishnubhotla',
+  shortName: 'Sivaram V',
+  role: 'Robotics & Simulation Engineer',
   location: 'Harrisburg, Pennsylvania',
-  intro: 'I build simulated and physical robot systems that make complex manipulation easier to understand, test, and deploy.',
+  intro: 'I am a robotics and simulation engineer passionate about building intelligent systems that connect simulation with real-world robots.',
+  aboutShort: 'I work at the intersection of robotics simulation, perception, and physical robot integration, with a focus on making complex systems easier to test and understand.',
+  aboutLong: 'My work explores how simulation, digital twins, computer vision, and robot interfaces can work together to move ideas from an experiment toward a reliable physical system.',
   focus: 'Robotics simulation, digital twins, and real robot integration',
-  currentWork: 'Advanced Manufacturing & Robotics at Harrisburg University',
+  currentWork: 'Robotics Technician at Harrisburg University',
   education: 'M.Eng. Robotics, University of Maryland, College Park',
   links: {
     github: 'https://github.com/sivaram-dheeraj-vishnubhotla',
@@ -14,6 +16,23 @@ export const site = {
     email: 'mailto:hello@example.com'
   }
 } as const;
+
+export const education = [
+  {
+    degree: 'M.Eng. Robotics',
+    institution: 'University of Maryland, College Park',
+    period: 'Add dates'
+  }
+] as const;
+
+export const workHistory = [
+  {
+    role: 'Robotics Technician',
+    organization: 'Harrisburg University',
+    period: 'Current',
+    description: 'Advanced manufacturing and robotics work focused on simulation, digital twins, and real robot integration.'
+  }
+] as const;
 
 export const projects = [
   {
