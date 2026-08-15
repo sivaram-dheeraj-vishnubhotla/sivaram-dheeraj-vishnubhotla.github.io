@@ -14,25 +14,10 @@ export const site = {
     linkedin: 'https://www.linkedin.com/in/sivaram-dheeraj-vishnubhotla/',
     scholar: 'https://scholar.google.com/citations?hl=en&pli=1&user=QpSemXMAAAAJ',
     resume: 'https://drive.google.com/file/d/1s6vBA5IH9WiDXPfba_ijRlkBBS2-RVmD/view?usp=sharing',
-    email: 'mailto:vishnubhotlad@gmail.com',
-    phone: 'tel:+12403540297'
+    email: 'mailto:vishnubhotlad@gmail.com'
   },
-  contactEmail: 'vishnubhotlad@gmail.com',
-  contactPhone: '+1 (240) 354-0297'
+  contactEmail: 'vishnubhotlad@gmail.com'
 } as const;
-
-export const education = [
-  {
-    degree: 'M.Eng. Robotics',
-    institution: 'University of Maryland, College Park',
-    period: 'Aug. 2023 - May 2025'
-  },
-  {
-    degree: 'B.Tech. Mechanical Engineering',
-    institution: 'KL University, Guntur District, Andhra Pradesh, India',
-    period: 'Aug. 2019 - April 2023'
-  }
-] as const;
 
 export const workHistory = [
   {
@@ -58,6 +43,22 @@ export const workHistory = [
     organization: 'Volpe Information Technology Group, Ellicott City, MD',
     period: 'Sept. 2025 - Dec. 2025',
     description: 'Developed Python data ingestion and analysis pipelines using AWS Cost Explorer APIs, S3, Lambda, and SNS, reducing manual monitoring by more than 40% across 15+ AWS services. Supported CI/CD deployment through Jenkins.'
+  }
+] as const;
+
+export const Experience = workHistory;
+
+export const education = [
+  {
+    degree: 'M.Eng. Robotics',
+    institution: 'University of Maryland, College Park',
+    period: 'Aug. 2023 - May 2025'
+  },
+  {
+    degree: 'B.Tech. Mechanical Engineering',
+    specialization: 'Robotics and Mechatronics',
+    institution: 'KL University, Guntur District, Andhra Pradesh, India',
+    period: 'Aug. 2019 - April 2023'
   }
 ] as const;
 
