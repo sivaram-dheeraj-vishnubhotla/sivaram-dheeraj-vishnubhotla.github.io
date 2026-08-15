@@ -1,0 +1,1 @@
+Add the public resume document URL in src/data/site.ts under site.links.resume. This can be a Google Drive, Dropbox, or other hosted document link. Add project images and demo media here as the portfolio develops.

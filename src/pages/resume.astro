@@ -1,0 +1,9 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../data/site';
+---
+<PageLayout title={`Resume — ${site.name}`}>
+  <section class="page-intro"><p class="kicker">Resume</p><h1>A compact record of the work.</h1><p>View the latest resume document or find the longer professional profile online.</p><div class="actions">{site.links.resume ? <a class="button" href={site.links.resume} target="_blank" rel="noreferrer">View resume document ↗</a> : <span class="button secondary">Resume link coming soon</span>}<a class="button secondary" href={site.links.linkedin} target="_blank" rel="noreferrer">LinkedIn profile ↗</a></div></section>
+  <section class="content-grid"><div><p class="eyebrow">Current</p></div><div><h2>{site.currentWork}</h2><p>{site.focus}.</p></div></section>
+  <section class="content-grid"><div><p class="eyebrow">Education</p></div><div><h2>M.Eng. Robotics</h2><p>University of Maryland, College Park</p></div></section>
+</PageLayout>

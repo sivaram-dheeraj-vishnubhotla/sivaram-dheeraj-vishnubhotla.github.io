@@ -1,0 +1,40 @@
+---
+import { site } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.name, description = site.intro } = Astro.props;
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="data:," />
+    <title>{title} — {site.role}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label={`${site.name} home`}><span>DV</span>{site.shortName}</a>
+      <nav aria-label="Primary navigation">
+        {[
+          ['/about/', 'About'],
+          ['/projects/', 'Projects'],
+          ['/blog/', 'Writing'],
+          ['/resume/', 'Resume']
+        ].map(([href, label]) => <a class:list={{ active: path === href }} href={href}>{label}</a>)}
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <span>© {new Date().getFullYear()} {site.name}</span>
+      <span>Built for robots, systems, and careful questions.</span>
+    </footer>
+  </body>
+</html>

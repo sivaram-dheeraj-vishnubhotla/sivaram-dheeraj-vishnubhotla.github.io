@@ -1,0 +1,9 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../data/site';
+---
+<PageLayout title={`About — ${site.name}`}>
+  <section class="page-intro"><p class="kicker">About</p><h1>Robots are systems questions made physical.</h1><p>{site.intro}</p></section>
+  <section class="content-grid"><div><p class="eyebrow">The short version</p></div><div><p>I am a robotics engineer working across simulation, perception, manipulation, and the practical bridge between a digital model and a real robot.</p><p>My current work is rooted in advanced manufacturing and robotics at Harrisburg University. I am especially interested in tools that make robot behavior observable: digital twins, realistic simulation, clear interfaces, and repeatable experiments.</p><p>{site.education}.</p></div></section>
+  <section class="content-grid"><div><p class="eyebrow">Areas of focus</p></div><div class="tags"><span class="tag">Robotics simulation</span><span class="tag">Digital twins</span><span class="tag">NVIDIA Isaac Sim</span><span class="tag">ROS 2</span><span class="tag">UR5 manipulation</span><span class="tag">Computer vision</span><span class="tag">VR teleoperation</span><span class="tag">Simulation to real</span></div></section>
+</PageLayout>

@@ -1,0 +1,13 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.filter((post) => !post.data.draft).map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<PageLayout title={`${post.data.title} — Dheeraj Vishnubhotla`} description={post.data.description}>
+  <article><p class="kicker">Writing</p><h1>{post.data.title}</h1><p class="article-meta">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} · {post.data.tags.join(' · ')}</p><Content /></article>
+</PageLayout>
