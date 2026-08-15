@@ -11,7 +11,8 @@ export const site = {
   education: 'M.Eng. Robotics, University of Maryland, College Park',
   links: {
     github: 'https://github.com/sivaram-dheeraj-vishnubhotla',
-    linkedin: 'https://www.linkedin.com/',
+    linkedin: 'https://www.linkedin.com/in/sivaram-dheeraj-vishnubhotla/',
+    scholar: 'https://scholar.google.com/citations?hl=en&pli=1&user=QpSemXMAAAAJ',
     resume: 'https://drive.google.com/file/d/1s6vBA5IH9WiDXPfba_ijRlkBBS2-RVmD/view?usp=sharing',
     email: 'mailto:vishnubhotlad@gmail.com',
     phone: 'tel:+12403540297'
