@@ -1,1 +1,1 @@
-Add the public resume document URL in src/data/site.ts under site.links.resume. This can be a Google Drive, Dropbox, or other hosted document link. Add project images and demo media here as the portfolio develops.
+Add the public resume document URL in src/data/site.ts under site.links.resume. This can be a Google Drive, Dropbox, or other hosted document link. Add project images to public/images/ and set each project's image field to a path such as /images/ur5-teleoperation.jpg.

@@ -4,5 +4,5 @@ import { projects, site } from '../data/site';
 ---
 <PageLayout title={`Projects — ${site.name}`}>
   <section class="page-intro"><p class="kicker">Projects</p><h1>Experiments with a physical consequence.</h1><p>A growing archive of robot systems, simulation studies, and perception pipelines. Each project is structured to make the engineering decisions visible.</p></section>
-  <section class="grid section">{projects.map((project) => <article class="project-card"><div class="media">{project.image || '[ project image / video ]'}</div><p class="meta">{project.type}</p><h2>{project.title}</h2><p>{project.description}</p><div class="tags">{project.tags.map((tag) => <span class="tag">{tag}</span>)}</div><p class="meta" style="margin-top: 22px;">Project detail coming soon</p></article>)}</section>
+  <section class="grid section">{projects.map((project) => <article class="project-card"><div class="media">{project.image ? <img src={project.image} alt={`${project.title} project preview`} loading="lazy" /> : '[ project image / video ]'}</div><p class="meta">{project.type}</p><h2>{project.title}</h2><p>{project.description}</p><div class="tags">{project.tags.map((tag) => <span class="tag">{tag}</span>)}</div><p class="meta" style="margin-top: 22px;">Project detail coming soon</p></article>)}</section>
 </PageLayout>
