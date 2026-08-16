@@ -46,13 +46,14 @@ const navItems = [
     <main><slot /></main>
     <footer class="site-footer">
       <span>© {new Date().getFullYear()} {site.name}</span>
-      <span>Built for robots, systems, and careful questions.</span>
+      <span>Turning ideas into intelligent machines.</span>
     </footer>
     <script>
       const root = document.documentElement;
       const nav = document.querySelector('.site-nav');
       const menuToggle = document.querySelector('.menu-toggle');
       const toggle = document.querySelector('.theme-toggle');
+      const scrollCue = document.querySelector('.scroll-cue');
       const saved = localStorage.getItem('theme');
       if (saved === 'dark') {
         root.dataset.theme = 'dark';
@@ -68,6 +69,11 @@ const navItems = [
         localStorage.setItem('theme', next);
         toggle.textContent = next === 'dark' ? '☾' : '☀';
       });
+      const updateScrollCue = () => {
+        scrollCue?.classList.toggle('is-hidden', window.scrollY > 8);
+      };
+      updateScrollCue();
+      window.addEventListener('scroll', updateScrollCue, { passive: true });
       document.addEventListener('click', (event) => {
         const target = event.target;
         if (!(target instanceof Element)) return;
