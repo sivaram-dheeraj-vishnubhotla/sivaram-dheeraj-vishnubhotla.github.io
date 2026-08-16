@@ -17,7 +17,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .site-nav.is-open { display: flex; }
 .nav-links { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .header-actions { display: flex; align-items: center; gap: 14px; }
-.site-nav a { color: var(--muted); } .site-nav a:hover, .site-nav a.active { color: var(--ink); } .site-nav a.active { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 6px; }
+.site-nav a { color: var(--muted); transition: color 0.25s ease; } .site-nav a:hover, .site-nav a:focus-visible { color: var(--accent); } .site-nav a.active { color: var(--accent); font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 6px; }
 .theme-toggle { border: 1px solid var(--line); background: transparent; color: var(--ink); padding: 6px 8px; cursor: pointer; font: 500 12px 'DM Mono', monospace; }
 .menu-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 4px; width: 40px; height: 40px; border: 1px solid var(--line); background: transparent; cursor: pointer; padding: 0 10px; }
 .menu-toggle span { display: block; width: 100%; height: 2px; background: var(--ink); border-radius: 999px; transition: transform 0.2s ease, opacity 0.2s ease; }
