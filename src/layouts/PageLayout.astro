@@ -62,6 +62,7 @@ const navItems = [
       menuToggle?.addEventListener('click', () => {
         const isOpen = nav?.classList.toggle('is-open');
         if (menuToggle) menuToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
       });
       toggle?.addEventListener('click', () => {
         const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
@@ -80,6 +81,7 @@ const navItems = [
         if (!nav?.contains(target) && !menuToggle?.contains(target)) {
           nav?.classList.remove('is-open');
           menuToggle?.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
         }
       });
     </script>
