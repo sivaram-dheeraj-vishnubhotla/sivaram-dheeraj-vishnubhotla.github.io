@@ -10,6 +10,7 @@ interface Props {
 const { title = site.name, description = site.intro } = Astro.props;
 const path = Astro.url.pathname;
 const navItems = [
+  ['/', 'Home'],
   ['/about/', 'About me'],
   ['/projects/', 'Projects'],
   ['/blog/', 'Writing'],
