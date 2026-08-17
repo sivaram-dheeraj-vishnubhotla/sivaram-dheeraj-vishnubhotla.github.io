@@ -124,11 +124,12 @@ export const projects = [
     status: 'Selected work'
   },
   {
-    title: 'Open-Vocabulary Vision',
-    type: 'Perception pipeline',
-    description: 'An open-vocabulary food-ingredient perception pipeline using GroundingDINO and SAM2.1, improving detection accuracy from approximately 60% to 95% and reducing latency by 47%.',
-    tags: ['Vision-language', 'Detection', 'Python'],
-    image: '',
+    title: 'TrackAI - Human Detector And Tracker',
+    type: 'Robotic perception',
+    description: 'A monocular vision system developed for ACME Robotics to detect and track humans in dynamic environments. Uses YOLOv8 with CSRT/SORT tracking to maintain unique identities across frames. Converts camera detections into robot/world coordinates for safer navigation and path planning.',
+    tags: ['YOLOv8', 'OpenCV', 'C++', 'Object Tracking (CSRT)', 'Coordinate Transformations'],
+    image: '/output.gif',
+    link: 'https://github.com/sivaram-dheeraj-vishnubhotla/TrackAI-Human-Detector-and-Tracker.git',
     status: 'Selected work'
   },
   {
@@ -138,13 +139,5 @@ export const projects = [
     tags: ['RL', 'PbRL', 'MetaWorld', 'Machine learning'],
     image: '',
     status: 'Research project'
-  },
-  {
-    title: 'TrackAI - Human Detector and Tracker',
-    type: 'Robotic perception',
-    description: 'A C++ and OpenCV perception pipeline using YOLOv8 and ONNX for real-time people detection, CSRT tracking, identity assignment, and camera-to-robot reference-frame transforms.',
-    tags: ['C++', 'OpenCV', 'YOLOv8', 'ONNX'],
-    image: '',
-    status: 'Selected work'
   }
 ] as const;
